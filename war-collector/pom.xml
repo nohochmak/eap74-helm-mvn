@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://apache.org" 
+         xmlns:xsi="http://w3.org"
+         xsi:schemaLocation="http://apache.org http://apache.org">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example.openshift</groupId>
+    <artifactId>eap-war-puller</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.11.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-war-files</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <!-- First WAR File -->
+                                <artifactItem>
+                                    <groupId>org.jboss.eap.quickstarts</groupId>
+                                    <artifactId>helloworld-html5</artifactId>
+                                    <version>7.4.0.GA</version>
+                                    <type>war</type>
+                                    <destFileName>helloworld-html5.war</destFileName>
+                                </artifactItem>
+                                <!-- Second WAR File -->
+                                <artifactItem>
+                                    <groupId>org.jboss.eap.quickstarts</groupId>
+                                    <artifactId>helloworld-rs</artifactId>
+                                    <version>7.4.0.GA</version>
+                                    <type>war</type>
+                                    <destFileName>helloworld-jms.war</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                            <!-- This target folder is the S2I default drop-zone -->
+                            <outputDirectory>${project.basedir}/deployments</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
