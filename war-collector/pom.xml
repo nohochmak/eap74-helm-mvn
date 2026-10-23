@@ -28,20 +28,20 @@
                                 <!-- First WAR File -->
                                 <artifactItem>
                                     <groupId>org.jboss.eap.quickstarts</groupId>
+                                    <artifactId>helloworld-rs</artifactId>
+                                    <version>7.4.0.GA</version>
+                                    <type>war</type>
+                                    <destFileName>helloworld-rs.war</destFileName>
+                                </artifactItem>
+                                  <!-- Second WAR File -->
+                                <artifactItem>
+                                    <groupId>org.jboss.eap.quickstarts</groupId>
                                     <artifactId>helloworld-html5</artifactId>
                                     <version>7.4.0.GA</version>
                                     <type>war</type>
                                     <destFileName>helloworld-html5.war</destFileName>
                                 </artifactItem>
-                                <!-- Second WAR File -->
-                                <artifactItem>
-                                    <groupId>org.jboss.eap.quickstarts</groupId>
-                                    <artifactId>helloworld-rs</artifactId>
-                                    <version>7.4.0.GA</version>
-                                    <type>war</type>
-                                    <destFileName>helloworld-jms.war</destFileName>
-                                </artifactItem>
-                            </artifactItems>
+                          </artifactItems>
                             <!-- This target folder is the S2I default drop-zone -->
                             <outputDirectory>${project.basedir}/deployments</outputDirectory>
                         </configuration>
