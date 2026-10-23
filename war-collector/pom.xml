@@ -30,7 +30,7 @@
                                     <groupId>org.jboss.eap.quickstarts</groupId>
                                     <artifactId>helloworld-html5</artifactId>
                                     <version>7.4.0.GA</version>
-                                    <!-- <type>war</type> -->
+                                    <type>war</type>
                                     <destFileName>helloworld-html5.war</destFileName>
                                 </artifactItem>
                                 <!-- Second WAR File -->
@@ -38,7 +38,7 @@
                                     <groupId>org.jboss.eap.quickstarts</groupId>
                                     <artifactId>helloworld-rs</artifactId>
                                     <version>7.4.0.GA</version>
-                                    <!-- <type>war</type> -->
+                                    <type>war</type>
                                     <destFileName>helloworld-jms.war</destFileName>
                                 </artifactItem>
                             </artifactItems>
