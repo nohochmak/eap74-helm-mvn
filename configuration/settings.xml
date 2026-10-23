@@ -5,7 +5,7 @@
     <mirror>
       <id>internal-nexus</id>
       <name>Internal Enterprise Repository</name>
-      <url>nexus3.multi-war-helm-mvn.svc.cluster.local:8081</url>
+      <url>nexus3.multi-war-helm-mvn.svc.cluster.local:8081/repository/maven-public</url>
       <!-- <url>https://nexus3-multi-war-helm-mvn.apps-crc.testing/repository/maven-public</url> -->
       <mirrorOf>*</mirrorOf>
     </mirror>
