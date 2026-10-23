@@ -53,7 +53,7 @@
     <repositories>
         <repository>
             <id>internal-nexus</id>
-            <url>nexus3.multi-war-helm-mvn.svc.cluster.local</url> <!-- Using Service URL for test-->
+            <url>nexus3.multi-war-helm-mvn.svc.cluster.local:8081</url> <!-- Using Service URL for test-->
             <!-- <url>https://nexus3-multi-war-helm-mvn.apps-crc.testing/repository/maven-public</url> -->
             <releases>
                 <enabled>true</enabled>
